@@ -1,0 +1,18 @@
+echo "Creating environment"
+conda create -p ./.env python=3.7 --yes
+. activate ./.env
+
+echo "Installing deps"
+conda install pandas scipy matplotlib seaborn requests tqdm scikit-learn --yes
+pip install praw
+pip install networkx
+
+
+
+echo "Installing dev tools"
+conda install jupyter rope flake8 --yes
+
+echo "Installing GCS tools"
+pip install google-cloud-storage
+pip install google-cloud-bigquery
+
